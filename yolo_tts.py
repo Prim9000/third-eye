@@ -37,4 +37,4 @@ while(True):
     myOutput = gTTS(text=labels, lang='en')
     myOutput.save('talk.mp3')
     os.system('mpg123 talk.mp3')
- cv2.destroyAllWindows()
+cv2.destroyAllWindows()
