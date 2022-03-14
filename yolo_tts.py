@@ -2,6 +2,7 @@ import torch
 from gtts import gTTS
 from io import BytesIO
 import cv2
+import os
 
 vid = cv2.VideoCapture(0)
   
