@@ -29,12 +29,14 @@ while(True):
 
     df = results.pandas().xyxy[0]
 
-    labels = str()
+    # Speak the labels
+    labels = ""
 
     for label in df['name']:
       labels += label + " "
-
-    myOutput = gTTS(text=labels, lang='en')
-    myOutput.save('talk.mp3')
-    os.system('mpg123 talk.mp3')
+    
+    if labels != "":
+      myOutput = gTTS(text=labels, lang='en')
+      myOutput.save('talk.mp3')
+      os.system('mpg123 talk.mp3')
 cv2.destroyAllWindows()
