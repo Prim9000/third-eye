@@ -1,10 +1,12 @@
 from PIL import Image
-import cv2
+import os
 import numpy as np
 from tesserocr import PyTessBaseAPI
 import pytesseract
 from PIL import Image
 import cv2
+from gtts import gTTS
+from io import BytesIO
 import time
 
 vid = cv2.VideoCapture(0)
@@ -22,6 +24,11 @@ while True:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         text = pytesseract.image_to_string(gray, lang='eng+tha')
         print(text)
+    
+        if text:
+            myOutput = gTTS(text=text, lang='tha')
+            myOutput.save('talk.mp3')
+            os.system('mpg123 talk.mp3')
         # IMPORTANT CODE BELOW
         last_recorded_time = curr_time
 	
