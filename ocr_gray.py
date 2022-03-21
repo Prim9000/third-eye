@@ -7,7 +7,7 @@ from PIL import Image
 import cv2
 import time
 
-cam=cv2.VideoCapture(0)
+vid = cv2.VideoCapture(0)
 last_recorded_time = time.time() # this keeps track of the last time a frame was processed
 
 while True:
@@ -15,14 +15,14 @@ while True:
 
     # keep these three statements outside of the if statement, so we 
     #     can still display the camera/video feed in real time
-    suc, img=cam.read()
+    ret, frame = vid.read()
     #operation on image, it's not important
-    cv2.imshow('img', img)
+    cv2.imshow('frame', frame)
 
     if curr_time - last_recorded_time >= 5.0: # it has been at least 2 seconds
         # NOTE: ADD SOME STATEMENTS HERE TO PROCESS YOUR IMAGE VARIABLE, img
         	
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         text = pytesseract.image_to_string(gray, lang='eng+tha')
         print(text)
         # IMPORTANT CODE BELOW
