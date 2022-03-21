@@ -12,9 +12,6 @@ last_recorded_time = time.time() # this keeps track of the last time a frame was
 
 while True:
     curr_time = time.time() # grab the current time
-
-    # keep these three statements outside of the if statement, so we 
-    #     can still display the camera/video feed in real time
     ret, frame = vid.read()
     #operation on image, it's not important
     cv2.imshow('frame', frame)
