@@ -2,6 +2,7 @@ from PIL import Image
 import cv2
 import numpy as np
 from tesserocr import PyTessBaseAPI
+import pytesseract
 from PIL import Image
 import cv2
 import time
@@ -16,7 +17,7 @@ while True:
     #     can still display the camera/video feed in real time
     suc, img=cam.read()
     #operation on image, it's not important
-    cv2.imshow('frame', img)
+    cv2.imshow('img', img)
 
     if curr_time - last_recorded_time >= 5.0: # it has been at least 2 seconds
         # NOTE: ADD SOME STATEMENTS HERE TO PROCESS YOUR IMAGE VARIABLE, img
