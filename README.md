@@ -1,5 +1,6 @@
 # Third-eye
-Third eye is the evolutionary life for the blind and visual impaired.
+###### Third eye is the evolutionary life for the blind and visual impaired.
+
 ![image](https://user-images.githubusercontent.com/65888725/161082744-e4b2b349-313a-4afc-8677-d359c69cc41e.png)
 
 # Highlights
