@@ -1,0 +1,3 @@
+23/11/2022 Git clone this drive, install all the pip_list.md in ocr_easyocr directory and run "python3 ocr_easyocr.py" and you can not name the file "easyocr.py" because it will run the actual code in the directory
+Then, it turns out to be "CORE DUMPED"
+Nothing work, and I have to do the whole thing again.
